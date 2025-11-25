@@ -1,6 +1,6 @@
-# Sito Aziendale Quality Inspect
+# PMG PROMPT SOLUTIONS
 
-Sito web per l'azienda di ispezioni e controllo qualità.
+Sito web per l'azienda "pmg prompt solutions" di consulenza, ispezioni e controllo qualità.
 
 ## Struttura
 - index.html - Pagina principale
