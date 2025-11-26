@@ -19,6 +19,7 @@ body {
     padding: 0 15px;
 }
 
+
 /* Header */
 header {
     background-color: #fff;
@@ -71,6 +72,7 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
+
 /* Hero Section */
 .hero {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), #0056b3;
@@ -105,6 +107,7 @@ nav ul li a:hover {
     background-color: #e55e00;
 }
 
+
 /* Sezioni */
 section {
     padding: 80px 0;
@@ -130,6 +133,7 @@ section {
     max-width: 700px;
     margin: 0 auto;
 }
+
 
 /* Servizi */
 .services-grid {
@@ -162,6 +166,7 @@ section {
     color: #333;
 }
 
+
 /* Chi Siamo */
 .about-content {
     display: flex;
@@ -192,12 +197,25 @@ section {
     gap: 50px;
 }
 
-.contact-info {
-    flex: 1;
-}
-
+.contact-info, 
 .contact-form {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Allineamento titoli alla stessa altezza */
+.contact-info h3, 
+.contact-form h3 {
+    font-size: 1.6rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    min-height: 2.8rem;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    color: #0056b3;
 }
 
 .contact-item {
@@ -206,11 +224,35 @@ section {
     margin-bottom: 25px;
 }
 
+.contact-item h4 {
+    font-size: 1.15rem;
+    margin-bottom: 0.4rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.contact-item p {
+    font-size: 1.05rem;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
 .contact-icon {
     font-size: 20px;
     color: #0056b3;
     margin-right: 15px;
     margin-top: 5px;
+}
+
+
+/* Centratura del form */
+.contact-form form {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .form-group {
@@ -236,6 +278,26 @@ section {
     height: 150px;
     resize: vertical;
 }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-content,
+    .contact-container {
+        flex-direction: column;
+    }
+    
+    .contact-info h3, 
+    .contact-form h3 {
+        font-size: 1.4rem;
+        min-height: auto;
+        margin-bottom: 1rem;
+    }
+    
+    .contact-form form {
+        max-width: 100%;
+    }
+}
+
 
 /* Footer */
 footer {
@@ -264,6 +326,7 @@ footer {
     color: #ccc;
     font-size: 14px;
 }
+
 
 /* Certificazioni */
 .cert-grid {
@@ -302,6 +365,7 @@ footer {
     line-height: 1.5;
 }
 
+
 /* Responsive */
 @media (max-width: 768px) {
     .header-container {
@@ -336,3 +400,4 @@ footer {
     }
 
 }
+
