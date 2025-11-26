@@ -124,58 +124,65 @@
     </section>
 
     <!-- Contatti -->
-    <section id="contatti">
-        <div class="container">
-            <div class="section-title">
-                <h2>Contattaci</h2>
-                <p>Richiedi informazioni o un preventivo personalizzato</p>
+<section id="contatti">
+    <div class="container">
+        <div class="section-title">
+            <h2>Contattaci</h2>
+            <p>Richiedi informazioni o un preventivo personalizzato</p>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Informazioni di Contatto</h3>
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div>
+                        <h4>Indirizzo</h4>
+                        <p>Calea Victorie, 123<br>Bucarest</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <div>
+                        <h4>Telefono</h4>
+                        <p>+40 1234567890</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">✉️</div>
+                    <div>
+                        <h4>Email</h4>
+                        <p>info@PMGpromptsolutions.ro</p>
+                    </div>
+                </div>
             </div>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h3>Informazioni di Contatto</h3>
-                    <div class="contact-item">
-                        <div class="contact-icon">📍</div>
-                        <div>
-                            <h4>Indirizzo</h4>
-                            <p>Calea Victorie, 123<br>Bucarest</p>
-                        </div>
+            <div class="contact-form">
+                <h3>Invia un Messaggio</h3>
+                <form action="https://formspree.io/f/mrbwzgnj" method="POST" id="contact-form">
+                    <input type="hidden" name="_subject" value="Nuovo messaggio dal sito PMG Prompt Solutions">
+                    <input type="text" name="_gotcha" style="display: none;">
+                    
+                    <div class="form-group">
+                        <label for="nome">Nome e Cognome *</label>
+                        <input type="text" id="nome" name="nome" required>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">📞</div>
-                        <div>
-                            <h4>Telefono</h4>
-                            <p>+40 1234567890</p>
-                        </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">✉️</div>
-                        <div>
-                            <h4>Email</h4>
-                            <p>info@PMGpromptsolutions.ro</p>
-                        </div>
+                    <div class="form-group">
+                        <label for="telefono">Telefono</label>
+                        <input type="tel" id="telefono" name="telefono">
                     </div>
-                </div>
-                <div class="contact-form">
-                    <h3>Invia un Messaggio</h3>
-                    <form action="https://tally.so/r/Me1agE" method="POST">
-                        <div class="form-group">
-                            <label for="nome">Nome e Cognome</label>
-                            <input type="text" id="nome" name="nome" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="messaggio">Messaggio</label>
-                            <textarea id="messaggio" name="messaggio" required></textarea>
-                        </div>
-                        <button type="submit" class="btn">Invia Messaggio</button>
-                    </form>
-                </div>
+                    <div class="form-group">
+                        <label for="messaggio">Messaggio *</label>
+                        <textarea id="messaggio" name="messaggio" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Invia Messaggio</button>
+                </form>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Footer -->
     <footer>
@@ -201,6 +208,7 @@
 </body>
 
 </html>
+
 
 
 
