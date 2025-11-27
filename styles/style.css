@@ -191,6 +191,10 @@ section {
     flex: 1;
 }
 
+.about-text .btn {
+    margin-top: 25px;
+}
+
 .about-image {
     flex: 1;
     border-radius: 8px;
@@ -486,6 +490,7 @@ footer {
         font-size: 18px;
     }
 }
+
 
 
 
