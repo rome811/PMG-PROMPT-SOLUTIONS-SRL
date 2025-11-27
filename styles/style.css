@@ -20,6 +20,7 @@ body {
 }
 
 
+
 /* Header */
 header {
     background-color: #fff;
@@ -27,6 +28,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
+    transition: all 0.3s ease;
 }
 
 .header-container {
@@ -73,6 +75,7 @@ nav ul li a:hover {
 }
 
 
+
 /* Hero Section */
 .hero {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), #0056b3;
@@ -108,11 +111,11 @@ nav ul li a:hover {
 }
 
 
+
 /* Sezioni */
 section {
     padding: 80px 0;
 }
-
 
 /* Riduzione spazio sezione contatti */
 #contatti {
@@ -139,6 +142,7 @@ section {
     max-width: 700px;
     margin: 0 auto;
 }
+
 
 
 /* Servizi */
@@ -173,6 +177,7 @@ section {
 }
 
 
+
 /* Chi Siamo */
 .about-content {
     display: flex;
@@ -197,6 +202,8 @@ section {
     display: block;
 }
 
+
+
 /* Contatti */
 .contact-container {
     display: flex;
@@ -209,6 +216,7 @@ section {
     display: flex;
     flex-direction: column;
 }
+
 
 
 /* Allineamento titoli alla stessa altezza */
@@ -225,7 +233,8 @@ section {
 }
 
 
-/* Allineamento perfetto titolo form con campi */
+
+/* Allineamento titolo form con campi */
 .contact-form h3 {
     text-align: center;
     padding: 0 10px;
@@ -257,6 +266,7 @@ section {
     margin-right: 15px;
     margin-top: 5px;
 }
+
 
 
 /* Centratura del form */
@@ -292,25 +302,6 @@ section {
     resize: vertical;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .about-content,
-    .contact-container {
-        flex-direction: column;
-    }
-    
-    .contact-info h3, 
-    .contact-form h3 {
-        font-size: 1.4rem;
-        min-height: auto;
-        margin-bottom: 1rem;
-    }
-    
-    .contact-form form {
-        max-width: 100%;
-        padding: 0 5px;
-    }
-}
 
 
 /* Footer */
@@ -340,6 +331,7 @@ footer {
     color: #ccc;
     font-size: 14px;
 }
+
 
 
 /* Certificazioni */
@@ -380,29 +372,142 @@ footer {
 }
 
 
-/* Responsive */
+
+/* Responsive - MENU MOBILE MIGLIORATO */
 @media (max-width: 768px) {
+    /* Header mobile più compatto */
     .header-container {
-        flex-direction: column;
-        text-align: center;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 0;
+        min-height: 70px;
+        transition: all 0.3s ease;
+    }
+
+
+    
+    /* Logo più piccolo su mobile */
+    .logo {
+        font-size: 20px;
+    }
+
+
+    
+    /* MENU MOBILE SU 3 COLONNE */
+    nav ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        display: none;
+        grid-template-columns: repeat(3, 1fr); /* 3 colonne */
+        gap: 0;
+        margin-top: 0;
+        padding: 20px 15px;
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.4s ease-in-out;
     }
     
-    nav ul {
-        margin-top: 20px;
-        flex-direction: column;
+    nav ul.show {
+        display: grid;
+        max-height: 200px; /* Altezza per 2 righe */
     }
     
     nav ul li {
-        margin: 10px 0;
+        margin: 8px 0;
+        text-align: center;
+    }
+    
+    nav ul li a {
+        display: block;
+        padding: 8px 5px;
+        font-size: 14px;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    nav ul li a:hover {
+        background-color: #f0f7ff;
+        color: #0056b3;
     }
     
     .mobile-menu {
         display: block;
+        transition: transform 0.3s ease;
     }
     
+    .mobile-menu.active {
+        transform: rotate(90deg);
+    }
+
+
+    
+    /* Header ridotto quando si scrolla - SOLO MOBILE */
+    header.scrolled {
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    header.scrolled .header-container {
+        padding: 8px 0;
+        min-height: 50px;
+    }
+    
+    header.scrolled .logo {
+        font-size: 18px;
+    }
+
+
+    
+    /* Transizione menu da verticale a orizzontale - SOLO MOBILE */
+    @media (max-width: 480px) {
+        nav ul {
+            grid-template-columns: repeat(3, 1fr); /* Rimane su 3 colonne */
+            padding: 15px 10px;
+        }
+        
+        nav ul.show {
+            max-height: 150px; /* Leggermente più compatto */
+        }
+        
+        nav ul li a {
+            font-size: 13px;
+            padding: 6px 3px;
+        }
+    }
+    
+    @media (min-width: 481px) and (max-width: 768px) {
+        nav ul {
+            grid-template-columns: repeat(3, 1fr); /* 3 colonne */
+            padding: 20px 15px;
+        }
+        
+        nav ul.show {
+            max-height: 180px;
+        }
+    }
+
+
+    
+    /* Resto del responsive esistente */
     .about-content,
     .contact-container {
         flex-direction: column;
+    }
+    
+    .contact-info h3, 
+    .contact-form h3 {
+        font-size: 1.4rem;
+        min-height: auto;
+        margin-bottom: 1rem;
+    }
+    
+    .contact-form form {
+        max-width: 100%;
+        padding: 0 5px;
     }
     
     .hero h1 {
@@ -412,8 +517,19 @@ footer {
     .hero p {
         font-size: 18px;
     }
-
 }
 
+
+
+/* Menu orizzontale per schermi più grandi - SOLO MOBILE */
+@media (min-width: 769px) and (max-width: 1024px) {
+    nav ul li {
+        margin-left: 20px;
+    }
+    
+    nav ul li a {
+        font-size: 14px;
+    }
+}
 
 
