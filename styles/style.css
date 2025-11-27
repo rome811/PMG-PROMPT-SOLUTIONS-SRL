@@ -113,6 +113,12 @@ section {
     padding: 80px 0;
 }
 
+
+/* Riduzione spazio sezione contatti */
+#contatti {
+    padding: 50px 0; /* Ridotto da 80px a 50px */
+}
+
 .light-bg {
     background-color: #f0f7ff;
 }
@@ -216,6 +222,13 @@ section {
     align-items: center;
     font-weight: 600;
     color: #0056b3;
+}
+
+
+/* Allineamento perfetto titolo form con campi */
+.contact-form h3 {
+    text-align: center;
+    padding: 0 10px;
 }
 
 .contact-item {
@@ -400,4 +413,5 @@ footer {
     }
 
 }
+
 
