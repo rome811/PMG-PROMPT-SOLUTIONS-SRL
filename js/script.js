@@ -1,22 +1,64 @@
-// Menu mobile
-document.querySelector('.mobile-menu').addEventListener('click', function() {
-    document.querySelector('nav ul').classList.toggle('show');
+// Header che si riduce allo scroll - SOLO SU MOBILE
+function handleHeaderScroll() {
+    const header = document.querySelector('header');
+    const scrollPosition = window.scrollY;
+    const isMobile = window.innerWidth <= 768;
+    
+    if (isMobile && scrollPosition > 50) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+}
+
+
+
+// Menu mobile con animazione
+const mobileMenu = document.querySelector('.mobile-menu');
+const navMenu = document.querySelector('nav ul');
+
+mobileMenu.addEventListener('click', function() {
+    navMenu.classList.toggle('show');
+    this.classList.toggle('active');
 });
 
-// Smooth scrolling
-document.querySelectorAll('nav a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        
+
+
+// Chiudi menu mobile al click su un link
+document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', function(e) {
         const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
         
-        window.scrollTo({
-            top: targetElement.offsetTop - 100,
-            behavior: 'smooth'
-        });
+        if (targetId.startsWith('#')) {
+            e.preventDefault();
+            
+            // Chiudi menu mobile
+            navMenu.classList.remove('show');
+            mobileMenu.classList.remove('active');
+            
+            // Smooth scrolling
+            const targetElement = document.querySelector(targetId);
+            window.scrollTo({
+                top: targetElement.offsetTop - 100,
+                behavior: 'smooth'
+            });
+        }
     });
 });
+
+
+
+// Chiudi menu mobile quando si clicka fuori
+document.addEventListener('click', function(e) {
+    if (window.innerWidth <= 768) {
+        if (!e.target.closest('nav') && !e.target.closest('.mobile-menu')) {
+            navMenu.classList.remove('show');
+            mobileMenu.classList.remove('active');
+        }
+    }
+});
+
+
 
 // Gestione form con Formspree
 document.addEventListener('DOMContentLoaded', function() {
@@ -76,3 +118,14 @@ document.addEventListener('DOMContentLoaded', function() {
         console.error('Form di contatto NON trovato!');
     }
 });
+
+
+
+// Event listeners per lo scroll e resize
+window.addEventListener('scroll', handleHeaderScroll);
+window.addEventListener('resize', handleHeaderScroll);
+
+
+
+// Chiamata iniziale
+handleHeaderScroll();
