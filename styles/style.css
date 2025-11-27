@@ -19,6 +19,8 @@ body {
     padding: 0 15px;
 }
 
+
+
 /* Header */
 header {
     background-color: #fff;
@@ -72,6 +74,8 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
+
+
 /* Hero Section */
 .hero {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), #0056b3;
@@ -106,10 +110,14 @@ nav ul li a:hover {
     background-color: #e55e00;
 }
 
+
+
 /* Sezioni */
 section {
     padding: 80px 0;
 }
+
+
 
 /* Riduzione spazio sezione contatti */
 #contatti {
@@ -136,6 +144,8 @@ section {
     max-width: 700px;
     margin: 0 auto;
 }
+
+
 
 /* Servizi */
 .services-grid {
@@ -168,6 +178,8 @@ section {
     color: #333;
 }
 
+
+
 /* Chi Siamo */
 .about-content {
     display: flex;
@@ -192,6 +204,8 @@ section {
     display: block;
 }
 
+
+
 /* Contatti */
 .contact-container {
     display: flex;
@@ -204,6 +218,8 @@ section {
     display: flex;
     flex-direction: column;
 }
+
+
 
 /* Allineamento titoli alla stessa altezza */
 .contact-info h3, 
@@ -218,10 +234,13 @@ section {
     color: #0056b3;
 }
 
+
+
 /* Allineamento perfetto titolo form con campi */
 .contact-form h3 {
     text-align: center;
     padding: 0 15px;
+    margin-left: 15px;
 }
 
 .contact-item {
@@ -251,7 +270,9 @@ section {
     margin-top: 5px;
 }
 
-/* Centratura del form con allineamento perfetto */
+
+
+/* Centratura del form */
 .contact-form form {
     width: 100%;
     max-width: 500px;
@@ -285,6 +306,8 @@ section {
     resize: vertical;
 }
 
+
+
 /* Footer */
 footer {
     background-color: #333;
@@ -312,6 +335,8 @@ footer {
     color: #ccc;
     font-size: 14px;
 }
+
+
 
 /* Certificazioni */
 .cert-grid {
@@ -350,6 +375,8 @@ footer {
     line-height: 1.5;
 }
 
+
+
 /* Responsive */
 @media (max-width: 768px) {
     .header-container {
@@ -364,6 +391,8 @@ footer {
     .logo {
         font-size: 20px;
     }
+
+
     
     /* MENU MOBILE SU 3 COLONNE */
     nav ul {
@@ -414,6 +443,8 @@ footer {
     .mobile-menu.active {
         transform: rotate(90deg);
     }
+
+
     
     /* Header ridotto quando si scrolla - SOLO MOBILE */
     header.scrolled {
@@ -455,3 +486,4 @@ footer {
         font-size: 18px;
     }
 }
+
