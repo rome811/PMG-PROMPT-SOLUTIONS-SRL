@@ -19,8 +19,6 @@ body {
     padding: 0 15px;
 }
 
-
-
 /* Header */
 header {
     background-color: #fff;
@@ -74,8 +72,6 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
-
-
 /* Hero Section */
 .hero {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), #0056b3;
@@ -110,8 +106,6 @@ nav ul li a:hover {
     background-color: #e55e00;
 }
 
-
-
 /* Sezioni */
 section {
     padding: 80px 0;
@@ -142,8 +136,6 @@ section {
     max-width: 700px;
     margin: 0 auto;
 }
-
-
 
 /* Servizi */
 .services-grid {
@@ -176,8 +168,6 @@ section {
     color: #333;
 }
 
-
-
 /* Chi Siamo */
 .about-content {
     display: flex;
@@ -202,8 +192,6 @@ section {
     display: block;
 }
 
-
-
 /* Contatti */
 .contact-container {
     display: flex;
@@ -216,8 +204,6 @@ section {
     display: flex;
     flex-direction: column;
 }
-
-
 
 /* Allineamento titoli alla stessa altezza */
 .contact-info h3, 
@@ -232,12 +218,10 @@ section {
     color: #0056b3;
 }
 
-
-
-/* Allineamento titolo form con campi */
+/* Allineamento perfetto titolo form con campi */
 .contact-form h3 {
     text-align: center;
-    padding: 0 10px;
+    padding: 0 15px;
 }
 
 .contact-item {
@@ -267,15 +251,14 @@ section {
     margin-top: 5px;
 }
 
-
-
-/* Centratura del form */
+/* Centratura del form con allineamento perfetto */
 .contact-form form {
     width: 100%;
     max-width: 500px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    padding: 0 15px;
 }
 
 .form-group {
@@ -301,8 +284,6 @@ section {
     height: 150px;
     resize: vertical;
 }
-
-
 
 /* Footer */
 footer {
@@ -331,8 +312,6 @@ footer {
     color: #ccc;
     font-size: 14px;
 }
-
-
 
 /* Certificazioni */
 .cert-grid {
@@ -371,11 +350,8 @@ footer {
     line-height: 1.5;
 }
 
-
-
-/* Responsive - MENU MOBILE MIGLIORATO */
+/* Responsive */
 @media (max-width: 768px) {
-    /* Header mobile più compatto */
     .header-container {
         flex-direction: row;
         justify-content: space-between;
@@ -384,15 +360,10 @@ footer {
         min-height: 70px;
         transition: all 0.3s ease;
     }
-
-
     
-    /* Logo più piccolo su mobile */
     .logo {
         font-size: 20px;
     }
-
-
     
     /* MENU MOBILE SU 3 COLONNE */
     nav ul {
@@ -403,7 +374,7 @@ footer {
         background: white;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         display: none;
-        grid-template-columns: repeat(3, 1fr); /* 3 colonne */
+        grid-template-columns: repeat(3, 1fr);
         gap: 0;
         margin-top: 0;
         padding: 20px 15px;
@@ -414,7 +385,7 @@ footer {
     
     nav ul.show {
         display: grid;
-        max-height: 200px; /* Altezza per 2 righe */
+        max-height: 200px;
     }
     
     nav ul li {
@@ -443,8 +414,6 @@ footer {
     .mobile-menu.active {
         transform: rotate(90deg);
     }
-
-
     
     /* Header ridotto quando si scrolla - SOLO MOBILE */
     header.scrolled {
@@ -459,38 +428,6 @@ footer {
     header.scrolled .logo {
         font-size: 18px;
     }
-
-
-    
-    /* Transizione menu da verticale a orizzontale - SOLO MOBILE */
-    @media (max-width: 480px) {
-        nav ul {
-            grid-template-columns: repeat(3, 1fr); /* Rimane su 3 colonne */
-            padding: 15px 10px;
-        }
-        
-        nav ul.show {
-            max-height: 150px; /* Leggermente più compatto */
-        }
-        
-        nav ul li a {
-            font-size: 13px;
-            padding: 6px 3px;
-        }
-    }
-    
-    @media (min-width: 481px) and (max-width: 768px) {
-        nav ul {
-            grid-template-columns: repeat(3, 1fr); /* 3 colonne */
-            padding: 20px 15px;
-        }
-        
-        nav ul.show {
-            max-height: 180px;
-        }
-    }
-
-
     
     /* Resto del responsive esistente */
     .about-content,
@@ -507,7 +444,7 @@ footer {
     
     .contact-form form {
         max-width: 100%;
-        padding: 0 5px;
+        padding: 0 15px;
     }
     
     .hero h1 {
@@ -518,18 +455,3 @@ footer {
         font-size: 18px;
     }
 }
-
-
-
-/* Menu orizzontale per schermi più grandi - SOLO MOBILE */
-@media (min-width: 769px) and (max-width: 1024px) {
-    nav ul li {
-        margin-left: 20px;
-    }
-    
-    nav ul li a {
-        font-size: 14px;
-    }
-}
-
-
