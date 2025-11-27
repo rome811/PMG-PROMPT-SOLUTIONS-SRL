@@ -24,7 +24,7 @@ mobileMenu.addEventListener('click', function() {
 
 
 
-// Chiudi menu mobile al click su un link
+// Chiudi menu mobile al click su un link - MOBILE
 document.querySelectorAll('nav a').forEach(link => {
     link.addEventListener('click', function(e) {
         const targetId = this.getAttribute('href');
@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.log('Risposta ricevuta:', response.status);
                 
                 if (response.ok) {
-                    alert('✅ Messaggio inviato con successo! Ti contatteremo al più presto.');
+                    alert('✅ Messaggio inviato con successo! La contatteremo al più presto ai recapiti che ci ha fornito.');
                     contactForm.reset();
                 } else {
                     throw new Error('Errore nel server');
@@ -129,3 +129,4 @@ window.addEventListener('resize', handleHeaderScroll);
 
 // Chiamata iniziale
 handleHeaderScroll();
+
