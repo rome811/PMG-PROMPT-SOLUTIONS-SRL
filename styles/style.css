@@ -39,13 +39,22 @@ header {
 }
 
 .logo {
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 700;
     color: #0056b3;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo::before {
+    content: "🏭";
+    font-size: 24px;
 }
 
 .logo span {
     color: #ff6b00;
+    font-weight: 800;
 }
 
 nav ul {
@@ -490,6 +499,7 @@ footer {
         font-size: 18px;
     }
 }
+
 
 
 
