@@ -391,6 +391,43 @@ section {
 
 
 
+/* STILI PER VALIDAZIONE FORM */
+
+.form-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 5px;
+    display: none;
+    font-weight: 500;
+}
+
+.success-message {
+    color: #28a745;
+    font-size: 14px;
+    margin-top: 5px;
+    display: none;
+    font-weight: 500;
+}
+
+input.invalid,
+textarea.invalid {
+    border-color: #e74c3c !important;
+    background-color: #fff9f9;
+    box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.1);
+}
+
+input.valid,
+textarea.valid {
+    border-color: #28a745 !important;
+}
+
+
+
 /* Footer */
 footer {
     background-color: #333;
@@ -569,6 +606,7 @@ footer {
         font-size: 18px;
     }
 }
+
 
 
 
